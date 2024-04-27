@@ -1,0 +1,77 @@
+Version Control System (VCS): It's a system that records changes to files over time, allowing you to recall specific versions later.
+Need for VCS: VCS helps track changes, collaborate with others, revert to previous versions, and manage concurrent edits.
+Difference between SVN and Git: SVN is centralized, while Git is distributed. Git has faster branching and merging, better support for non-linear development, and stronger integrity.
+Preference between SVN and Git: Git is often preferred for its distributed nature, branching model, and widespread adoption in the industry.
+Advantages of Git over SVN: Faster branching and merging, offline work, better support for non-linear development, and stronger integrity with cryptographic assurance.
+Git as Distributed VCS: Each developer has a full copy of the repository, including its history. Changes can be made offline and shared later.
+Git's End-to-End workflow: It involves initializing a repository, adding files, committing changes, branching, merging, and pushing changes to a remote repository.
+Cloning code using Git: Use the git clone command followed by the URL of the repository you want to clone.
+Difference between Commit & Push: Commit records changes to the local repository, while push uploads commits to a remote repository.
+Difference between Push and Pull: Push sends local changes to a remote repository, while pull fetches changes from a remote repository to the local one.
+Git architecture: It consists of three main parts: working directory, staging area, and repository. Git stores data as snapshots of the entire repository.
+Difference between Centralized and Distributed VCS: In centralized VCS, there's a single server that stores the repository, while in distributed VCS, each developer has a full copy of the repository.
+Creating Remote Repositories in Git: Use hosting services like GitHub, GitLab, or Bitbucket to create remote repositories.
+Effect of Deleting .git folder: It removes the repository's version control history and settings.
+Configuring username, email, and editor in Git: Use git config commands to set these values.
+Where Git stores configuration details: Configuration details are stored in the .git/config file.
+Advantage of Stage in Git: It allows you to selectively add changes to the next commit.
+Git log options: git log options allow you to customize the output of the commit history.
+SHA-1 in Git: It's a cryptographic hash function used to uniquely identify objects in Git.
+Showing content diff of a modified file: Use git diff <filename>.
+Showing content diff of a staged file: Use git diff --cached <filename>.
+Deleting and renaming files in Git: Use git rm to delete and git mv to rename files.
+Branching strategy/release process: Describe how you manage branches for development, testing, and release.
+Branching model for parallel development: GitFlow is a popular model
+for parallel development, featuring long-lived branches for development, release, and hotfixes.
+
+Taking a bug fix to production: Typically, merge the bug fix branch into the production branch after thorough testing.
+Different branching models: GitFlow, GitHub Flow, and GitLab Flow are common branching models used in various development workflows.
+Experience with merging code in Git: Yes, merging code is a common task in collaborative development.
+Merging code in Git: Use git merge to integrate changes from one branch into another.
+Merge in Git: It combines changes from different branches into one branch.
+Conflict in Git: It occurs when Git cannot automatically resolve differences between two commits.
+Fast-forward merge: A type of merge where Git simply moves the pointer forward, as the target branch's history is linear and hasn't diverged.
+Difference between Merge and Rebase: Merge integrates changes from one branch into another, while rebase moves the entire feature branch to begin from the tip of the target branch.
+Resolving conflicts in Git: Manually edit conflicted files to resolve differences, then add and commit the changes.
+Types of conflicts: Content conflict, rename/delete conflict, and merge conflict.
+Conflict resolution: Typically, developers resolve conflicts locally before pushing changes.
+Difference between branch and tag: A branch is a pointer to a series of commits, allowing for divergent development. A tag is a pointer to a specific commit, typically used to mark release points.
+Creating branches and tags: Use git branch to create branches and git tag to create tags.
+Creating and switching branches in one command: Use git checkout -b <branchname>.
+HEAD pointer in Git: It points to the current commit in the repository.
+Storing binary files in Git: Yes, Git can store binary files, but large binary files are better managed with Git LFS.
+Skipping staging: Use git commit -a to stage and commit all modified files.
+Listing modified files: Use git diff --name-only or git status.
+Git revert: It creates a new commit that undoes changes made in a previous commit.
+Ignoring files globally: Use a .gitignore file with patterns to specify which files to ignore.
+Ignored files in a project: Commonly ignored files include build artifacts, temporary files, and IDE configurations.
+Removing a committed change: Use git revert to undo changes made by a specific commit.
+Locking a branch: Git doesn't have built-in branch locking mechanisms, but access control can be managed through hosting platforms like GitHub.
+Cloning a particular branch: Use git clone -b <branchname> <repository-url>.
+Restoring a deleted file: Use git checkout <commit> -- <filename> to restore a file from a specific commit.
+Listing diff of a file between branches: Use git diff <branch1>..<branch2> -- <filename>.
+Listing changes to be fetched: Use git fetch --dry-run.
+Git Stash: It temporarily shelves changes that are not ready to be committed.
+Adding a new remote: Use git remote add <name> <url>.
+Git ls-tree: It lists the contents of a tree object.
+Git cherry-pick: It applies the changes introduced by some existing commits.
+Git fork: It creates a copy of a repository where you can freely experiment with changes without affecting the original repository.
+Git squash: It combines multiple commits into a single commit.
+Difference between git fetch, pull, and clone: Fetch downloads objects and refs from another repository. Pull fetches changes and merges them into the current branch. Clone clones a repository into a new directory.
+Git Hooks: Scripts that Git executes before or after events such as commit, push, and receive.
+Git TAGs: Tags are references that point to specific points in Git history, often used to mark release versions.
+Git alias: Shortcuts for Git commands, defined in the .gitconfig file.
+Git gc: Git garbage collector, which optimizes the repository's history for performance.
+Git gc --aggressive: A more thorough garbage collection process.
+Inside .git folder: Contains all Git-related metadata and objects.
+Bare Git repository: A repository without a working directory, typically used for remote repositories.
+Git Remote Repository: A repository hosted on a remote server.
+Working Tree in Git: The directory where you're currently working and modifying files.
+Roles and Responsibility in Git: Define who is responsible for creating branches, merging code, and managing repositories.
+Port used by Git: Typically, Git uses port 22 for SSH and port 9418 for the Git protocol.
+Checking remote branches: Use git branch -r to list remote branches and git checkout <branch> to switch to a remote branch.
+Merging repositories: Use git remote add to add the other repository as a remote, then fetch and merge its branches.
+Git bisect: A binary search tool used to find the commit that introduced a bug.
+Git blob: A Git object containing the content of a file, identified by its SHA-1 hash.
+Git blame: Shows the last commit that modified each line of a file.
+Git webhooks: HTTP callbacks triggered by events in a repository, allowing integration with external services.
